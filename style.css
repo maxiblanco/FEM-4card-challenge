@@ -1,0 +1,178 @@
+/*
+Color palettes to use
+*/
+
+:root {
+  /* Primary */
+
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+
+  /* Neutral */
+
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+/* Reset */
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* END Reset */
+
+body {
+  display: grid;
+  grid-template-columns: 10% repeat(6, minmax(100px, 30%)) 10%;
+  grid-template-rows: 10% repeat(5, minmax(100px, 30%)) 10%;
+  grid-gap: 2em;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--very-light-gray);
+}
+
+p {
+  font-size: 15px;
+  color: var(--grayish-blue);
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+h2 {
+  font-weight: 200;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.card {
+  align-self: center;
+  justify-content: center;
+  max-width: 25vw;
+  margin: 0em;
+  border-radius: 6px;
+  border-top: 5px solid var(--grayish-blue);
+  display: grid;
+  grid-gap: 0px;
+  grid-template-columns: auto;
+  grid-template-rows: 30% 20% 20% 30%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card h3,
+p,
+img {
+  margin: 1.5em 2em;
+}
+
+.card img {
+  justify-self: end;
+  align-self: end;
+  grid-row: 4;
+}
+
+.card p {
+  grid-row: 2;
+}
+
+.team {
+  grid-column: 4 / span 2;
+  grid-row: 3 / span 2;
+  border-color: var(--cyan);
+}
+
+.supervisor {
+  grid-column: 2 / span 2;
+  grid-row: 4 / span 2;
+  border-color: var(--red);
+}
+
+.calculator {
+  grid-column: 6 / span 2;
+  grid-row: 4 / span 2;
+  border-color: var(--orange);
+}
+
+.karma {
+  grid-column: 4 / span 2;
+  grid-row: 5 / span 2;
+  border-color: var(--blue);
+}
+
+.container {
+  grid-column: 3 / span 4;
+  grid-row: 2;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  margin: 1em 100px;
+}
+
+.container h1 {
+  font-size: 3em;
+  letter-spacing: -1px;
+}
+
+.container h2 {
+  font-size: 3em;
+  letter-spacing: -1px;
+}
+
+.container h1 h2 {
+  padding: 1em;
+}
+
+.container p {
+  padding: 0em 6em;
+}
+
+footer {
+  grid-row: 7;
+  grid-column: 3 / span 4;
+  align-self: start;
+  justify-self: center;
+}
