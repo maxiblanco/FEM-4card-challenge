@@ -53,9 +53,14 @@ body {
 }
 
 header {
-  max-width: 500px;
-  margin: 4rem auto;
+  max-width: 520px;
+  margin: 3rem auto;
+  margin-top: 2rem;
   text-align: center;
+}
+
+header p {
+  font-size: 0.95rem;
 }
 
 main {
@@ -67,13 +72,15 @@ main {
 }
 
 p {
-  font-size: 15px;
+  font-size: 0.8rem;
   color: var(--grayish-blue);
   font-weight: 400;
 }
 
 h1 {
+  font-size: 2.2rem;
   margin: 0;
+  margin-bottom: 1rem;
   font-weight: 200;
 }
 
@@ -82,17 +89,18 @@ h1 span {
 }
 
 h2 {
-  font-weight: 400;
-  font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .card {
   width: 350px;
-  margin: 15px;
+  margin: 1rem;
   padding: 2rem;
-  border-radius: 6px;
-  border-top: 5px solid var(--grayish-blue);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 5px;
+  border-top: 4px solid var(--grayish-blue);
+  box-shadow: 0px 12px 31px -5px rgba(19, 52, 71, 0.2);
 }
 
 .card img {
@@ -101,7 +109,8 @@ h2 {
 }
 
 .card p {
-  margin: 2rem 0;
+  margin: 1rem 2rem 2rem 0;
+  line-height: 1.1rem;
 }
 
 .team {
@@ -118,11 +127,6 @@ h2 {
 
 .calculator {
   border-color: var(--blue);
-}
-
-.container h1 {
-  font-size: 3em;
-  letter-spacing: -1px;
 }
 
 .push-down {
