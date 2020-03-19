@@ -21,7 +21,6 @@ Color palettes to use
 
 html {
   box-sizing: border-box;
-  font-size: 16px;
 }
 
 *,
@@ -45,29 +44,26 @@ ul {
   font-weight: normal;
 }
 
-ol,
-ul {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 /* END Reset */
 
 body {
-  display: grid;
-  grid-template-columns: repeat(7, minmax(0, auto));
-  grid-template-rows: repeat(7, minmax(0, auto));
-  justify-items: center;
-  align-items: center;
-  grid-row-gap: 2em;
   font-family: "Poppins", sans-serif;
+  color: var(--very-dark-blue);
   background-color: var(--very-light-gray);
-  max-height: 100vh;
-  overflow: hidden;
+}
+
+header {
+  max-width: 500px;
+  margin: 4rem auto;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 p {
@@ -77,12 +73,60 @@ p {
 }
 
 h1 {
-  font-size: 40px;
+  margin: 0;
+  font-weight: 200;
+}
+
+h1 span {
   font-weight: 600;
 }
 
 h2 {
-  font-weight: 200;
+  font-weight: 400;
+  font-weight: bold;
+}
+
+.card {
+  width: 350px;
+  margin: 15px;
+  padding: 2rem;
+  border-radius: 6px;
+  border-top: 5px solid var(--grayish-blue);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  display: block;
+  margin-left: auto;
+}
+
+.card p {
+  margin: 2rem 0;
+}
+
+.team {
+  border-color: var(--red);
+}
+
+.karma {
+  border-color: var(--orange);
+}
+
+.supervisor {
+  border-color: var(--cyan);
+}
+
+.calculator {
+  border-color: var(--blue);
+}
+
+.container h1 {
+  font-size: 3em;
+  letter-spacing: -1px;
+}
+
+.push-down {
+  transform: translateY(50%);
 }
 
 .attribution {
@@ -93,94 +137,14 @@ h2 {
   color: hsl(228, 45%, 44%);
 }
 
-.card {
-  width: 25vw;
-  height: 25vh;
-  margin: 0em;
-  border-radius: 6px;
-  border-top: 5px solid var(--grayish-blue);
-  display: grid;
-  grid-gap: 0px;
-  grid-template-columns: auto;
-  justify-self: center;
-  align-self: center;
-  grid-template-rows: 30% 20% 20% 30%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+@media (max-width: 775px) {
+  .push-down {
+    transform: translateY(0);
+  }
 }
 
-.card h3,
-p,
-img {
-  margin: 0 2em;
-}
-
-.card img {
-  justify-self: end;
-  align-self: end;
-  grid-row: 4;
-}
-
-.card h1 {
-  grid-row: 1;
-}
-
-.card p {
-  grid-row: 2;
-  margin: 0 2em;
-}
-
-.container {
-  grid-column: 3 / span 3;
-  grid-row: 1;
-  text-align: center;
-}
-
-.container h2 {
-  font-size: 3em;
-  letter-spacing: -1px;
-}
-
-.container h1 h2 {
-  padding: 1em;
-}
-
-.container p {
-  padding: 1em;
-  max-width: 30vw;
-}
-
-.team {
-  grid-column: 3 / span 3;
-  grid-row: 2 / 4;
-  border-color: var(--cyan);
-}
-
-.karma {
-  grid-column: 3 / span 3;
-  grid-row: 4 / 6;
-  border-color: var(--blue);
-}
-
-.supervisor {
-  grid-column: 1 / span 2;
-  grid-row: 3 / 5;
-  border-color: var(--red);
-}
-
-.calculator {
-  grid-column: 6 / span 2;
-  grid-row: 3 /5;
-  border-color: var(--orange);
-}
-
-.container h1 {
-  font-size: 3em;
-  letter-spacing: -1px;
-}
-
-footer {
-  grid-row: 6 / 7;
-  grid-column: 3 / span 3;
-  align-self: start;
-  justify-self: center;
+@media (max-width: 1140px) {
+  .push-down {
+    transform: translateY(0);
+  }
 }
